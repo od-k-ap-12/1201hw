@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 50px;
+}
+.checkboxes{
+    display: flex;
+}
+.wrap-checkbox{
+    margin:30px;
+}
+.wrap-checkbox input{
+    display: none;
+}
+.wrap-switch{
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    gap:8px;
+}
+.switch{
+    display: block;
+    width:50px;
+    height: 25px;
+    background: #eee;
+    border: 1px solid blue;
+    border-radius: 5px;
+    padding: 1px;
+    transition: .5s;
+}
+.circle{
+    width:26px;
+    height:21px;
+    background: rgb(77, 63, 124);
+    transition: .5s;
+    border-radius: 5px;
+}
+.wrap-checkbox input:checked+label .switch{
+    background: rgb(77,63,124);
+}
+.wrap-checkbox input:checked+label .switch .circle{
+    background: #eee;
+    transform: translate(75%);
+}
