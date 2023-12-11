@@ -6,11 +6,20 @@
 
 body{
     margin: 50px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color:rgb(41, 36, 66);
+    background: rgb(180, 196, 176);
 }
-.checkboxes{
+.checkboxes,
+.radio-buttons,
+.inputs{
     display: flex;
 }
-.wrap-checkbox{
+.wrap-checkbox,
+.wrap-radio,
+.field,
+.text-area,
+.buttons{
     margin:30px;
 }
 .wrap-checkbox input{
@@ -26,8 +35,8 @@ body{
     display: block;
     width:50px;
     height: 25px;
-    background: #eee;
-    border: 1px solid blue;
+    background: rgb(255, 255, 255);
+    border: 1px solid green;
     border-radius: 5px;
     padding: 1px;
     transition: .5s;
@@ -35,14 +44,138 @@ body{
 .circle{
     width:26px;
     height:21px;
-    background: rgb(77, 63, 124);
+    background: green;
     transition: .5s;
     border-radius: 5px;
 }
 .wrap-checkbox input:checked+label .switch{
-    background: rgb(77,63,124);
+    border: 1px solid red;
 }
 .wrap-checkbox input:checked+label .switch .circle{
-    background: #eee;
+    background: red;
     transform: translate(75%);
 }
+
+label{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color:rgb(54, 34, 49);
+}
+.wrap-radio input{
+    display: none;
+}
+.wrap-radio label{
+    display: flex;
+    align-items: center;
+    gap:8px;
+}
+.wrap-radio .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:.8em;
+    width:.8em;
+    border:2px solid rgb(52, 177, 52);
+    transition: .2s;
+    font-size: 30px;
+    color:transparent;
+}
+.check,
+.checked{
+    width:15px;
+    height:15px;
+    background: white;
+    transition: .5s;
+    border-radius: 50%;
+    padding:3px;
+}
+.checked{
+    background: rgb(52, 177, 52);
+    opacity:0;
+}
+.wrap-radio input:checked + label .icon .checked{
+    opacity:1;
+}
+.field{
+    width: 250px;
+    border: 2px solid green;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding:6px;
+    padding-right:10px;
+    background: white;
+}
+.field input{
+    width:100%;
+    padding: 10px;
+    border: none;
+    outline:none;
+    background: white;
+    color:green;
+}
+.inputs .icon,
+.field input::placeholder{
+    color:green;
+}
+.invalid{
+    border: 2px solid red;
+}
+.invalid .icon,
+.invalid input,
+.invalid input::placeholder{
+    color:red;
+}
+.neutral{
+    border: 2px solid grey;
+}
+.neutral input,
+.neutral input::placeholder{
+    color:grey;
+}
+.btn{
+    color:white;
+    width:90px;
+    height:40px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    transition: .3s;
+}
+.hover:hover{
+    filter:brightness(.7);
+}
+.light-green{
+    background:rgb(62, 173, 62);
+}
+.dark-green{
+    background:rgb(35, 94, 35);
+}
+.pink{
+    background:rgb(207, 59, 109);
+}
+.grey{
+    background:rgb(133, 133, 133);
+}
+.dark-red{
+    background:rgb(102, 26, 36);
+}
+.round{
+    width:40px;
+    border-radius: 50%;
+}
+.buttons button{
+    margin:10px;
+}
+.text-area textarea{
+    width:600px;
+    padding:20px;
+    border:2px solid rgb(158, 158, 158);
+    font-size: 16px;
+}
+.text-area textarea::placeholder{
+    color: rgb(158, 158, 158);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
